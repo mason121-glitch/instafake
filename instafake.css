@@ -1,0 +1,464 @@
+
+/* ===== NIVEL 1: BASE/RESET - LO MÁS GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+    line-height: 1.5;
+}
+
+/* ===== NIVEL 2: LAYOUT PRINCIPAL ===== */
+.container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NIVEL 3: COMPONENTES GENERALES ===== */
+.header {
+    background: white;
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #262626;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-icon {
+    font-size: 24px;
+    color: #262626;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* ===== NIVEL 4: LAYOUT DE CONTENIDO ===== */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 35px;
+    padding: 30px 0;
+    min-height: 100vh;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ===== NIVEL 5: COMPONENTES DE POST ===== */
+.post {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 12px;
+    background: white;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.username {
+    font-weight: 600;
+    font-size: 15px;
+    color: #262626;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 24px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    overflow: hidden;
+}
+
+/* Estilos para las imágenes dentro de post-image */
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.post-actions {
+    padding: 16px 20px 20px 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #262626;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.likes-count {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #262626;
+}
+
+.post-caption {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #262626;
+    margin-bottom: 8px;
+}
+
+.post-caption strong {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #8e8e8e;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== NIVEL 6: SIDEBAR COMPONENTS ===== */
+.sidebar {
+    position: sticky;
+    top: 110px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-suggestion {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.suggestion-header {
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #8e8e8e;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.suggested-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.suggest-pic {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.suggest-info {
+    flex: 1;
+}
+
+.suggest-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 2px;
+}
+
+.suggest-subtitle {
+    font-size: 12px;
+    color: #8e8e8e;
+    line-height: 1.3;
+}
+
+.follow-btn {
+    background: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== NIVEL 7: FOOTER SIDEBAR ===== */
+.footer-links {
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info p {
+    font-size: 11px;
+    color: #c7c7c7;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.copyright {
+    font-weight: 600;
+    color: #8e8e8e;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #efefef;
+}
+
+/* ===== NIVEL 8: ESTADOS E INTERACCIONES (MÁS ESPECÍFICOS) ===== */
+.logo:hover {
+    color: #0095f6;
+}
+
+.nav-icon:hover {
+    color: #0095f6;
+    transform: scale(1.1);
+    background-color: rgba(0, 149, 246, 0.1);
+}
+
+.post:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.username:hover {
+    color: #0095f6;
+}
+
+.action-btn:hover {
+    color: #0095f6;
+    transform: scale(1.2);
+    background-color: rgba(0, 149, 246, 0.1);
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.suggested-user:hover {
+    background-color: rgba(0, 149, 246, 0.02);
+}
+
+.follow-btn:hover {
+    background: #1877f2;
+    transform: translateY(-1px);
+}
+
+.follow-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== NIVEL 9: RESPONSIVE - ESPECÍFICO POR DISPOSITIVO ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px 0;
+    }
+    
+    .sidebar {
+        order: -1;
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .post-image {
+        height: 350px;
+    }
+    
+    .feed {
+        gap: 24px;
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .header-content {
+        padding: 12px 0;
+    }
+    
+    .logo {
+        font-size: 24px;
+    }
+    
+    .nav-icons {
+        gap: 16px;
+    }
+    
+    .nav-icon {
+        font-size: 22px;
+    }
+    
+    .main-content {
+        padding: 16px 0;
+    }
+    
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+    
+    .post {
+        border-radius: 8px;
+    }
+    
+    .post-image {
+        height: 280px;
+        font-size: 20px;
+    }
+    
+    .post-header,
+    .post-actions {
+        padding: 12px 16px;
+    }
+    
+    .action-buttons {
+        gap: 16px;
+    }
+    
+    .action-btn {
+        font-size: 22px;
+    }
+    
+    .profile-suggestion,
+    .footer-links {
+        padding: 16px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 320px) {
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-icons {
+        gap: 12px;
+    }
+    
+    .nav-icon {
+        font-size: 20px;
+        padding: 6px;
+    }
+    
+    .post-image {
+        height: 240px;
+        font-size: 18px;
+    }
+    
+    .main-content {
+        gap: 16px;
+    }
+    
+    .feed {
+        gap: 20px;
+    }
+}
