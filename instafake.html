@@ -1,212 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InstaFake - Red Social de Fotos</title>
-    <!-- CSS correcto desde app_web/style -->
-    <link rel="stylesheet" href="style/instafake.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="control.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InstaFake</title>
+<link rel="stylesheet" href="style/instafake.css">
+<link rel="shortcut icon" type="image/png" href="control.png">
 </head>
 <body>
-    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <a href="#" class="logo">📸 InstaFake</a>
-                <nav class="nav-icons">
-                    <span class="nav-icon">🏠</span>
-                    <span class="nav-icon">💌</span>
-                    <span class="nav-icon">❤️</span>
-                    <span class="nav-icon">👤</span>
-                </nav>
             </div>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <div class="container">
-        <main class="main-content">
-            <!-- FEED -->
-            <section class="feed">
-                <!-- POST 1 -->
-                <article class="post">
-                    <div class="post-header">
-                        <div class="profile-pic">JS</div>
-                        <span class="username">juan_photographer</span>
-                    </div>
-                    <div class="post-image">
-                        <img src="image/michi.jpg" alt="Paisaje increíble">
-                    </div>
-                    <div class="post-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn">❤️</button>
-                            <button class="action-btn">💬</button>
-                            <button class="action-btn">📤</button>
-                        </div>
-                        <div class="likes-count">❤️ 127 me gusta</div>
-                        <div class="post-caption">
-                            <strong>juan_photographer</strong> ¡Qué hermoso atardecer en la playa! 🌅 #photography #sunset #beach
-                        </div>
-                        <div class="post-time">hace 2 horas</div>
-                    </div>
-                </article>
-
-                <!-- POST 2 -->
-                <article class="post">
-                    <div class="post-header">
-                        <div class="profile-pic">MR</div>
-                        <span class="username">maria_designs</span>
-                    </div>
-                    <div class="post-image">
-                        <img src="image/maincra.jpg" alt="Diseño gráfico">
-                    </div>
-                    <div class="post-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn">❤️</button>
-                            <button class="action-btn">💬</button>
-                            <button class="action-btn">📤</button>
-                        </div>
-                        <div class="likes-count">❤️ 89 me gusta</div>
-                        <div class="post-caption">
-                            <strong>maria_designs</strong> Nuevo proyecto terminado ✨ #design #creative #art
-                        </div>
-                        <div class="post-time">hace 5 horas</div>
-                    </div>
-                </article>
-
-                <!-- POST 3 -->
-                <article class="post">
-                    <div class="post-header">
-                        <div class="profile-pic">CF</div>
-                        <span class="username">chef_foodie</span>
-                    </div>
-                    <div class="post-image">
-                        <img src="image/pizza.jpg" alt="Pizza artesanal">
-                    </div>
-                    <div class="post-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn">❤️</button>
-                            <button class="action-btn">💬</button>
-                            <button class="action-btn">📤</button>
-                        </div>
-                        <div class="likes-count">❤️ 234 me gusta</div>
-                        <div class="post-caption">
-                            <strong>chef_foodie</strong> Pizza margherita con ingredientes frescos 🍅 #food #pizza #homemade
-                        </div>
-                        <div class="post-time">hace 1 día</div>
-                    </div>
-                </article>
-
-                <!-- POST 4 -->
-                <article class="post">
-                    <div class="post-header">
-                        <div class="profile-pic">LP</div>
-                        <span class="username">lucia_art</span>
-                    </div>
-                    <div class="post-image">
-                        <img src="image/arte.jpg" alt="Arte moderno">
-                    </div>
-                    <div class="post-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn">❤️</button>
-                            <button class="action-btn">💬</button>
-                            <button class="action-btn">📤</button>
-                        </div>
-                        <div class="likes-count">❤️ 156 me gusta</div>
-                        <div class="post-caption">
-                            <strong>lucia_art</strong> Mi nueva creación abstracta 🎨 #art #abstract #creativity
-                        </div>
-                        <div class="post-time">hace 3 días</div>
-                    </div>
-                </article>
-
-                <!-- POST 5 -->
-                <article class="post">
-                    <div class="post-header">
-                        <div class="profile-pic">RG</div>
-                        <span class="username">runner_carlos</span>
-                    </div>
-                    <div class="post-image">
-                        <img src="image/gym.jpg" alt="Entrenamiento running">
-                    </div>
-                    <div class="post-actions">
-                        <div class="action-buttons">
-                            <button class="action-btn">❤️</button>
-                            <button class="action-btn">💬</button>
-                            <button class="action-btn">📤</button>
-                        </div>
-                        <div class="likes-count">❤️ 73 me gusta</div>
-                        <div class="post-caption">
-                            <strong>runner_carlos</strong> 10K completados esta mañana 💪 #running #fitness #motivation
-                        </div>
-                        <div class="post-time">hace 6 horas</div>
-                    </div>
-                </article>
-            </section>
-
-            <!-- SIDEBAR -->
-            <aside class="sidebar">
-                <div class="profile-suggestion">
-                    <div class="suggestion-header">Sugerencias para ti</div>
-                    
-                    <div class="suggested-user">
-                        <div class="suggest-pic">AL</div>
-                        <div class="suggest-info">
-                            <div class="suggest-username">ana_traveler</div>
-                            <div class="suggest-subtitle">Viajera • 15 amigos en común</div>
-                        </div>
-                        <button class="follow-btn">Seguir</button>
-                    </div>
-
-                    <div class="suggested-user">
-                        <div class="suggest-pic">DM</div>
-                        <div class="suggest-info">
-                            <div class="suggest-username">diego_music</div>
-                            <div class="suggest-subtitle">Músico • 8 amigos en común</div>
-                        </div>
-                        <button class="follow-btn">Seguir</button>
-                    </div>
-
-                    <div class="suggested-user">
-                        <div class="suggest-pic">SP</div>
-                        <div class="suggest-info">
-                            <div class="suggest-username">sofia_fitness</div>
-                            <div class="suggest-subtitle">Entrenadora • 23 amigos en común</div>
-                        </div>
-                        <button class="follow-btn">Seguir</button>
-                    </div>
-
-                    <div class="suggested-user">
-                        <div class="suggest-pic">TK</div>
-                        <div class="suggest-info">
-                            <div class="suggest-username">tech_innovator</div>
-                            <div class="suggest-subtitle">Desarrollador • 12 amigos en común</div>
-                        </div>
-                        <button class="follow-btn">Seguir</button>
-                    </div>
-
-                    <div class="suggested-user">
-                        <div class="suggest-pic">NV</div>
-                        <div class="suggest-info">
-                            <div class="suggest-username">nature_lover</div>
-                            <div class="suggest-subtitle">Fotógrafa • 7 amigos en común</div>
-                        </div>
-                        <button class="follow-btn">Seguir</button>
-                    </div>
+    <main class="main-content container">
+        <section class="feed">
+            <article class="post">
+                <div class="post-header">
+                    <div class="profile-pic">JS</div>
+                    <span class="username">juan_photographer</span>
                 </div>
-
-                <div class="footer-links">
-                    <div class="footer-info">
-                        <p>Acerca de • Ayuda • Prensa • API</p>
-                        <p>Empleo • Privacidad • Condiciones</p>
-                        <p>Ubicaciones • Idioma</p>
-                        <p class="copyright">© 2025 InstaFake</p>
-                    </div>
+                <div class="post-image">
+                    <img src="image/michi.jpg" alt="Paisaje increíble">
                 </div>
-            </aside>
-        </main>
-    </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
